@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Acker';
+    src: url('acker.otf');
+}
+@font-face {
+    font-family: 'Acker Italics';
+    src: url('acker-ita.otf');
+}
+@font-face {
+    font-family: 'Trainer';
+    src: url('trainer.otf');
+}
+
+body{
+    /* background-color: red; */
+}
+
+#title{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    margin: 0px;
+    font-family: 'Acker';
+    font-size: 65px;
+    width: 400px;
+    line-height: 60px;
+    font-weight: 300;
+    z-index: -2000;
+}
+
+
+#course-description{
+    position: fixed;
+    top: 30px;
+    left: 870px;
+    margin: 0px;
+    font-family: 'Trainer';
+    font-size: 22px;
+    line-height: 25px;
+    z-index: -2000;
+    transition: all 100ms ease-in-out;
+    min-width: 265px;
+}
+
+#title-container{
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    margin-top: -10px;
+    /* background-color: blue; */
+}
+
+.titles{
+    display: grid;
+
+    grid-template-columns: 285px 285px 285px 570px;
+    margin-left: 10px;
+    background-color: white;
+    padding-top: 20px;
+}
+
+.section-title{
+    text-transform: uppercase;
+    font-family: 'Acker';
+    font-weight: 700;
+    font-size: 17px;
+    width: 265px;
+    border-bottom: 2px solid black;
+    background-color: white;
+}
+
+#pros{
+    width: 570x;
+}
+
+.names{
+    font-family: 'Trainer';
+    text-transform: capitalize;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.text{
+    font-family: 'Trainer';
+    font-size: 16px;
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+
+.paceholder-box{
+    background-color: white;
+    /* padding-bottom: 20px; */
+    display: grid;
+    grid-template-columns: repeat(5, 285px);
+    margin-left: 10px;
+    background-color: white;
+}
+.paceholder-box>*{
+    width: 265px;
+    padding-bottom: 30px;
+    /* margin-right: 20px; */
+    background-color: white;
+   /* background-color: red; */
+   border-bottom: 2px solid black;
+}
+.pros-of-tech{
+    width: 525px;
+}
+
+#pro-title{
+    width: 545px;
+}
+
+@media screen and (max-width: 1190px) {
+
+
+    #course-description{
+        left: 590px;
+    }
+
+    .pros-of-tech{
+        width: 265px;
+    }
+
+    #pro-title{
+        width: 285px;
+    }
+
+    .titles{
+        grid-template-columns: 285px 285px 285px 285px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    /* title size 
+    subtitle placing and size 
+    remove title names and replace with student wprk 
+    change text size and put student name and tech name on the same line  */
+
+    #title{
+        font-size: 50px;
+        line-height: 45px;
+        left: 15px;
+        top: 20px;
+    }
+    #course-description{
+        left: 20px;
+        top: 140px;
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    #student-name{
+        width: 90vw;
+        margin-left: 0px;
+        margin-right: 5px;
+        padding: 0px;
+    }
+
+    .paceholder-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paceholder-box>*{
+        border-bottom: none;
+        padding-bottom: 5px;
+        grid-template-columns: 95vw;
+    }
+
+    #pro-title{
+        padding-bottom: 20px;
+        border-bottom: 2px solid black;
+    }
+
+
+
+}
